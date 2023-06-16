@@ -1,0 +1,20 @@
+<button class="bi bi-play-circle" (click)="startTrafficLight()"></button>
+<button class="bi bi-pause-circle" (click)="stopTrafficLight()"></button>
+
+<div class="item">
+    <div class="traffic-light">
+        <div class="light" [ngClass]="{'red': lightColor === 'Red' || lightColor === 'RedAndYellow'}"></div>
+        <div class="light" [ngClass]="{'yellow': lightColor === 'Yellow'|| lightColor === 'RedAndYellow'}"></div>
+        <div class="light" [ngClass]="{'green': lightColor === 'Green'}"></div>
+    </div>
+
+    <div class="pole">
+        <div class="pedestrian">
+            <img class="sign" src="../../../../assets/01_Pedestrian-Pushbutton-Plate_R10-4B_Left.png">
+            <button class="button" (click)="extendGreenLight()">
+                <img class="arrow" src="../../../../assets/arrow-icon-design-free-png.webp">
+            </button>
+        </div>
+    </div>
+    <div class="pole-end"></div>
+</div>
